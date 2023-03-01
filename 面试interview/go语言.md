@@ -47,6 +47,8 @@
 
 Go 传参和返回值是通过 FP+offset 实现，并且存储在调用函数的栈帧中。
 
+[栈与堆](https://cloud.tencent.com/developer/article/1688327)
+
 ### 04 Go 有异常类型吗？
 
 有。Go用error类型代替try...catch语句，这样可以节省资源。同时增加代码可读性：
@@ -741,7 +743,7 @@ map的类型是map[key]，key类型的ke必须是可比较的，通常情况，�
 
 ![img](https://pic2.zhimg.com/80/v2-1107961e741b834eb5fc071ff68da831_1440w.webp)
 
-**方式一、使用内置sync.Map**
+**方式一、使用内置[sync.Map](https://www.jianshu.com/p/298ac240f9b5)**
 
 sync.Map支持并发读写，采取了**空间换时间**的机制，冗余了两个数据结构，分别是read和dirty
 
